@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uang Kas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+</head>
+<body>
+    <div class="container">
+        <button id="logoutButton" class="logout-button">
+            <i class="fas fa-sign-out-alt"></i> <!-- Ikon Logout -->
+        </button>
+        <div id="notification" class="notification" style="display: none;">Anda telah berhasil logout</div>
+        <div id="dataNotification" class="notification" style="display: none;">Data berhasil ditambahkan</div>
+        <h1>Uang Kas</h1>
+        <form id="kasForm">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" required>
+
+            <label for="tanggal">Tanggal:</label>
+            <input type="date" id="tanggal" required>
+
+            <label for="masuk">Uang Masuk:</label>
+            <input type="number" id="masuk" placeholder="0" min="0">
+
+            <label for="keluar">Uang Keluar:</label>
+            <input type="number" id="keluar" placeholder="0" min="0">
+
+            <button type="submit">Tambah Data</button>
+        </form>
+
+        <h2>Data Uang Kas</h2>
+        <table id="kasTable">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Tanggal</th>
+                    <th>Uang Masuk</th>
+                    <th>Uang Keluar</th>
+                    <th>Saldo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <footer style="text-align: center; padding: 20px 0; font-size: 0.9em; color: #555;">
+        &copy; 2024 V-Kas. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

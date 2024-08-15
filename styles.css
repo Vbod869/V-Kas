@@ -1,0 +1,207 @@
+/* Reset default browser styles */
+body, h1, h2, p, label, input, button, table {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #d2b48c, #ffffff);
+
+    /* Adjusted gradient to match rupiah colors */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Enable positioning of logout button */
+}
+
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 6px 12px; /* Reduced padding */
+    font-size: 0.9em; /* Smaller font size */
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.6em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"] {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"] {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+}
+
+.notification {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 80%;
+}
+
+.notification.hidden {
+    display: none;
+}
+
+#notification {
+    background-color: #d4edda; /* Green background for logout notification */
+    color: #155724;
+}
+
+#dataNotification {
+    background-color: #d1ecf1; /* Blue background for data added notification */
+    color: #0c5460;
+}
